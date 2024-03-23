@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\Calculatordanilki\bin\Debug\net8.0\Calculatordanilki.exe
+C:\Users\User\source\repos\Calculatordanilki\bin\Debug\net8.0\Calculatordanilki.deps.json
+C:\Users\User\source\repos\Calculatordanilki\bin\Debug\net8.0\Calculatordanilki.runtimeconfig.json
+C:\Users\User\source\repos\Calculatordanilki\bin\Debug\net8.0\Calculatordanilki.dll
+C:\Users\User\source\repos\Calculatordanilki\bin\Debug\net8.0\Calculatordanilki.pdb
+C:\Users\User\source\repos\Calculatordanilki\obj\Debug\net8.0\Calculatordanilki.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Calculatordanilki\obj\Debug\net8.0\Calculatordanilki.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Calculatordanilki\obj\Debug\net8.0\Calculatordanilki.AssemblyInfo.cs
+C:\Users\User\source\repos\Calculatordanilki\obj\Debug\net8.0\Calculatordanilki.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Calculatordanilki\obj\Debug\net8.0\Calculatordanilki.dll
+C:\Users\User\source\repos\Calculatordanilki\obj\Debug\net8.0\refint\Calculatordanilki.dll
+C:\Users\User\source\repos\Calculatordanilki\obj\Debug\net8.0\Calculatordanilki.pdb
+C:\Users\User\source\repos\Calculatordanilki\obj\Debug\net8.0\Calculatordanilki.genruntimeconfig.cache
+C:\Users\User\source\repos\Calculatordanilki\obj\Debug\net8.0\ref\Calculatordanilki.dll
