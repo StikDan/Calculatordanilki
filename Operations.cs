@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Castle.Facilities.Startable;
+using Castle.MicroKernel.Registration;
+using Castle.MicroKernel.Resolvers.SpecializedResolvers;
+using Castle.MicroKernel.SubSystems.Configuration;
+using Castle.Windsor;
+using System;
 
-namespace CalculatorCsharp
-{
-
+namespace CalculatorCsharp;
         public abstract class Operation //шаблон операций
         {
             public abstract string Name { get; }
@@ -64,5 +63,7 @@ namespace CalculatorCsharp
             }
         }
 
-    }
+
+
+    
 

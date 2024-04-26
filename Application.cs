@@ -1,57 +1,66 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Castle.Facilities.Startable;
+using Castle.MicroKernel.Registration;
+using Castle.MicroKernel.Resolvers.SpecializedResolvers;
+using Castle.MicroKernel.SubSystems.Configuration;
+using Castle.Windsor;
+using System;
 
-namespace CalculatorCsharp
+namespace CalculatorCsharp;
+
+public class Application
 {
-    public class Application
+    public Application(
+         IWindsorContainer container,
+         IOperationProvider operationProvider,
+         IMenu menu)
     {
-        private static string value; private static int choice;
+        this.container = container;
+        this.operationProvider = operationProvider;
+        this.menu = menu;
+    }
+
+    private IWindsorContainer container;
+    private IOperationProvider operationProvider;
+    private IMenu menu;
+    private IEnumerable<Operation> operations;
 
 
-        public void Run()
+    public void Run()
+    {
+        operations = operationProvider.Get();
+        menu.Menu(operations.ToArray());
+        Console.Write("ВЫБЕРИТЕ ДЕЙСТВИЕ: ");
+        int userInput = Convert.ToInt32(Console.ReadLine());
+        double result = 0;
+        switch (userInput)
         {
-            do
-            {
-                Operation add = new Addition();
-                Operation sub = new Substraction();
-                Operation multi = new Multiplacation();
-                Operation div = new Division();
-                Operation sqrt = new Sqrt();
-
-                choice = Convert.ToInt32(Console.ReadLine());
-
-                switch (choice)
-                {
-                    default:
-                        Console.WriteLine("Неизвестный оператор!");
-                        break;
-                    case 1:
-                        Console.WriteLine("Результат: " +  add, '\n');
-                        break;
-                    case 2:
-                        Console.WriteLine("Результат: " + sub, '\n');
-                        break;
-                    case 3:
-                        Console.WriteLine("Результат: " + multi, '\n');
-                        break;
-                    case 4:
-                        Console.WriteLine("Результат: " + div, '\n');  
-                        break;
-                    case 5:
-                        Console.WriteLine("Результат: " +  sqrt, "\n");
-                        break;
-                        //больше операций 
-                };
-
-                Console.Write("Вы хотите продолжить? (д/н):", '\n');
-                value = Console.ReadLine();
-            }
-            while
-
-            (value == "y" || value == "Y" || value == "д" || value == "Д");
+            case 1:
+                result = operations
+                    .ElementAt(userInput - 1)
+                    .Run();
+                Console.WriteLine(result);
+                break;
+            case 2:
+                result = operations
+                    .ElementAt(userInput - 1)
+                    .Run();
+                Console.WriteLine(result);
+                break;
+            case 3:
+                result = operations
+                    .ElementAt(userInput - 1)
+                    .Run();
+                Console.WriteLine(result);
+                break;
+            case 4:
+                result = operations
+                    .ElementAt(userInput - 1)
+                    .Run();
+                Console.WriteLine(result);
+                break;
+            default:
+                Console.WriteLine("НЕИЗВЕСТНОЕ ДЕЙСТВИЕ");
+                break;
         }
     }
 }

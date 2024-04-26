@@ -1,50 +1,64 @@
-﻿using System;
-
+﻿using Castle.Facilities.Startable;
+using Castle.MicroKernel.Registration;
+using Castle.MicroKernel.Resolvers.SpecializedResolvers;
+using Castle.MicroKernel.SubSystems.Configuration;
+using Castle.Windsor;
+using System;
 namespace CalculatorCsharp
 {
     public class Program
     {
-        public static void Menu(Operation[] operations)
-        {
-            Console.WriteLine("======== КАЛЬКУЛЯТОР ==========");
-            for (int i = 0; i < operations.Length; i++)
-            {
-                Operation operation = operations[i];
-                Console.WriteLine($"{i + 1}. ОПЕРАЦИЯ {operation.Name}");
-            }
-        }
-       public static void UserProgramInput()
-        {
-            var udi = new DataInput();
-            udi.UserInput();
-        }
-
-        public static void StartApplication()
-        {
-            var app = new Application();
-            app.Run();
-        }
+        private static IWindsorContainer _container = new WindsorContainer();
 
         public static void Main()
-    {
-        try
         {
-            Menu([
-                new Addition(),
-                    new Substraction(),
-                    new Multiplacation(),
-                    new Multiplacation(),
-                    new Sqrt()
-                ]);
-           UserProgramInput();
-           StartApplication();
+            try
+            {
+                Start();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
         }
-        catch (Exception e)
+
+        private static void Start()
         {
-            Console.WriteLine(e.ToString());
+            _container.AddFacility<StartableFacility>(f => f.DeferredStart());
+            _container.Kernel.Resolver.AddSubResolver(new CollectionResolver(_container.Kernel));
+            _container.Install(new LocalInstaller());
         }
     }
-  }
+
+    internal class LocalInstaller : IWindsorInstaller
+    {
+        public void Install(IWindsorContainer container, IConfigurationStore store)
+        {
+            container.Register(
+                Component.For<IWindsorContainer>().Instance(container),
+                Component.For<Application>()
+                         .StartUsingMethod("Run"),
+
+                Component.For<IMenu>()
+                         .ImplementedBy<ShowMenu>()
+                         .LifestyleTransient(),
+
+                Component.For<IOperationProvider>()
+                         .ImplementedBy<OperationProvider>(),
+
+                Component.For<Operation>()
+                         .ImplementedBy<Addition>(),
+                Component.For<Operation>()
+                         .ImplementedBy<Substraction>(),
+                Component.For<Operation>()
+                         .ImplementedBy<Multiplacation>(),
+                Component.For<Operation>()
+                         .ImplementedBy<Division>(),
+                Component.For<Operation>()
+                         .ImplementedBy<Sqrt>()
+            );
+        }
+    }
 } 
 
         
