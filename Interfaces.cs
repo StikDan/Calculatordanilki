@@ -5,41 +5,20 @@ using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using System;
 
-namespace CalculatorCsharp;
-public interface IOperationProvider
+namespace CalculatorCsharp
 {
-    public IEnumerable<Operation> Get();
-}
-public class OperationProvider : IOperationProvider
-{
-    private IEnumerable<Operation> operations;
-
-    public OperationProvider(IEnumerable<Operation> operations)
+    public interface IOperationProvider
     {
-        this.operations = operations;
+        public IEnumerable<Operation> Get();
     }
 
-    public IEnumerable<Operation> Get()
+    public interface IMenu
     {
-        return operations;
+        public void Menu(Operation[] operations);
+    }
+
+    public interface ISelectAct
+    {
+        public void SelectAction(Operation[] operations);
     }
 }
-
-public interface IMenu
-{
-    public void Menu(Operation[] operations);
-}
-
-public sealed class ShowMenu : IMenu
-{
-    public void Menu(Operation[] operations)
-    {
-        Console.WriteLine("======== КАЛЬКУЛЯТОР ==========");
-        for (int i = 0; i < operations.Length; i++)
-        {
-            Operation operation = operations[i];
-            Console.WriteLine($"{i + 1}. ОПЕРАЦИЯ {operation.Name};");
-        }
-    }
-}
-
