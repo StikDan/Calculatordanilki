@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\Calculator.Infrastructure\obj\Debug\net8.0\Calculator.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Calculator.Infrastructure\obj\Debug\net8.0\Calculator.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Calculator.Infrastructure\obj\Debug\net8.0\Calculator.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Calculator.Infrastructure\obj\Debug\net8.0\Calculator.Infrastructure.AssemblyInfo.cs
+C:\Users\User\source\repos\Calculator.Infrastructure\obj\Debug\net8.0\Calculator.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Calculator.Infrastructure\bin\Debug\net8.0\Calculator.Infrastructure.deps.json
+C:\Users\User\source\repos\Calculator.Infrastructure\bin\Debug\net8.0\Calculator.Infrastructure.dll
+C:\Users\User\source\repos\Calculator.Infrastructure\bin\Debug\net8.0\Calculator.Infrastructure.pdb
+C:\Users\User\source\repos\Calculator.Infrastructure\bin\Debug\net8.0\Calculator.Domain.dll
+C:\Users\User\source\repos\Calculator.Infrastructure\bin\Debug\net8.0\Calculator.Domain.pdb
+C:\Users\User\source\repos\Calculator.Infrastructure\obj\Debug\net8.0\Calculat.7C1202CC.Up2Date
+C:\Users\User\source\repos\Calculator.Infrastructure\obj\Debug\net8.0\Calculator.Infrastructure.dll
+C:\Users\User\source\repos\Calculator.Infrastructure\obj\Debug\net8.0\refint\Calculator.Infrastructure.dll
+C:\Users\User\source\repos\Calculator.Infrastructure\obj\Debug\net8.0\Calculator.Infrastructure.pdb
+C:\Users\User\source\repos\Calculator.Infrastructure\obj\Debug\net8.0\ref\Calculator.Infrastructure.dll
