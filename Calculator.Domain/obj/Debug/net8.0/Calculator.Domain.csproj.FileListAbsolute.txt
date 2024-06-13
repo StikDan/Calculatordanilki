@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\Calculator.Domain\obj\Debug\net8.0\Calculator.Domain.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Calculator.Domain\obj\Debug\net8.0\Calculator.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Calculator.Domain\obj\Debug\net8.0\Calculator.Domain.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Calculator.Domain\obj\Debug\net8.0\Calculator.Domain.AssemblyInfo.cs
+C:\Users\User\source\repos\Calculator.Domain\obj\Debug\net8.0\Calculator.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Calculator.Domain\bin\Debug\net8.0\Calculator.Domain.deps.json
+C:\Users\User\source\repos\Calculator.Domain\bin\Debug\net8.0\Calculator.Domain.dll
+C:\Users\User\source\repos\Calculator.Domain\bin\Debug\net8.0\Calculator.Domain.pdb
+C:\Users\User\source\repos\Calculator.Domain\obj\Debug\net8.0\Calculator.Domain.dll
+C:\Users\User\source\repos\Calculator.Domain\obj\Debug\net8.0\refint\Calculator.Domain.dll
+C:\Users\User\source\repos\Calculator.Domain\obj\Debug\net8.0\Calculator.Domain.pdb
+C:\Users\User\source\repos\Calculator.Domain\obj\Debug\net8.0\ref\Calculator.Domain.dll
